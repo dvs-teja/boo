@@ -1,0 +1,593 @@
+body {
+  padding: 102px;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: auto;   /* Allow vertical scrollbar */
+  flex-direction: column; /* Stack elements vertically */
+  height: auto;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section {
+  display: flex; /* or block if you don't need flex behavior */
+  flex-direction: column; /* Adjust if needed */
+  margin: 0;
+  padding: 10px;
+  width: 2200px;
+  max-width: 1499px;
+  height: 300px;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #f1f7ec; 
+}
+
+/* Example for child images */
+.scroll-container {
+overflow: hidden;  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Ensures it takes the full height of .section */
+}
+
+.img-container {
+  width: 2000px;
+  display: flex; 
+  height: 400px; 
+  transition: transform 0.5s ; 
+   overflow: hidden;
+   position: relative;
+   position: absolute;
+   left: 50%;
+  transform: translateX(-50%); /* Adjust for centering */
+}
+
+.img1 {
+ 
+  min-width: 85%; /* Ensure the main image is wider */
+  height: 100%; /* Full height */
+  display: flex;
+  justify-content: center; 
+  position: relative;
+  transition: opacity 0.5s ease; /* Optional: Add transition for opacity */
+
+}
+.img1:first-child {
+  margin-left: -0%; /* Adjust as necessary to show part of the first image */
+}
+.img1:last-child {
+  margin-right: -10%; /* Adjust as necessary to show part of the last image */
+}
+
+.img1 img {
+  width: 100%;
+  height: auto; 
+}
+
+.dots {
+  text-align: center;
+  margin-bottom: 200ppx;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+.navbar {
+  background-color: white;
+  width: 100%; 
+}
+.navbar21{
+  
+  margin-right: 525px;
+}
+.navbar2 {
+  background-color: #e8ece4;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+}
+
+.list,
+.list2 {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.logo {
+  margin-top: 5px;
+  height: 70px;
+  width: 150px;
+}
+
+.menu {
+  height: 20px;
+  width: 20px;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+.logosearch {
+  display: flex;
+  margin-left: 148px;
+}
+
+.logosearch1 {
+  display: flex;
+  margin-top: 20px;
+  height: 36px;
+  border: 1px solid #959991;
+  margin-left: 20px;
+}
+
+.cityandall {
+  margin-top: 4px;
+  margin-left: 250px;
+  display: flex;
+  cursor: pointer;
+}
+
+.mainflex {
+  display: flex;
+}
+
+.arrow {
+  margin-top: 25px;
+  margin-left: 20px;
+  height: 17px;
+  width: 20px;
+}
+
+.signin {
+  background-color: #f44464;
+  width: 60px;
+  color: white;
+  height: 25px;
+  margin-top: 19px;
+  margin-left: 25px;
+  border: 0;
+  border-radius: 3px;
+}
+
+.searchicon {
+  margin-left: 10px;
+  width: 20px;
+  margin-top: 10px;
+  height: 18px;
+}
+
+.vijayawada {
+  font-size: 20px;
+}
+
+.searchbox {
+  width: 546px;
+  height: 30px;
+  margin-top: 2px;
+  border: 0;
+  outline: none;
+}
+
+.arrow{
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  color: black; /* Change to desired color */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1000; /* Make sure arrows are on top */
+}
+
+.left-arrow {
+  left: 10px; /* Adjust position as needed */
+}
+
+.right-arrow {
+  right: 10px; /* Adjust position as needed */
+}
+.section {
+  padding: 10px;
+  width: 100%; /* Ensure it fits the container */
+  /* height: 400px; Adjust height */
+  overflow: hidden; /* Hide overflow */
+  position: relative; 
+}
+
+.scroll-container {
+  width: 100%;
+  height: 350px; /* Fixed height */
+  position: relative; /* Positioning for arrows */
+}
+
+.img-container {
+  display: flex;
+  position: absolute; /* Allows the images to overlap */
+  transition: transform 0.5s; 
+  left: 50%;
+  transform: translateX(-50%); /* Centering */
+}
+
+.img1 {
+  min-width: 80%; /* Width adjustment */
+  height: 100%; /* Full height */
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.left-arrow, .right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 1; /* Bring above other elements */
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+.dots {
+  position: absolute; 
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 1; 
+}
+.flexsection{
+  display: flex;
+}
+.seeall{
+  cursor: pointer;
+  padding: 10px;
+  color: red;
+  margin-top: 20px;
+  margin-left: 800px;
+}
+.seeallarrow{
+  color: red;
+  margin-top: 32px;
+}
+.fleximage{
+  padding: 6px;
+  border-radius: 20px;
+  width: 222.4px;
+  height: 378px;
+  margin-right: 15px;
+}
+.view-all{
+  color:#f44464;
+  margin-top: 35px;
+}
+.movie-slider{
+  display: flex;
+  margin-left: 39px;
+  transition: transform 0.5s ease; /* Smooth transition */
+
+}
+
+.movie-card {
+  min-width: 20%; /* Adjust this value based on how many cards you want to show */
+  box-sizing: border-box; /* Ensures padding/margins are included in width */
+  padding: 10px; /* Optional padding */
+}
+.view-all-arrow{
+  margin-top: 38px;
+
+  color:#f44464;
+  margin-left: 10px;
+  /* margin-bottom: 10pxs; */
+}
+.moviename{
+  margin-left: 16px;
+  font-size: 18px;
+}
+
+
+
+.navigation-arrows{
+  margin-top: 45px;
+  margin-right: 127px;
+  position: absolute;
+  top: 90%; /* Center vertically */
+  right: 10px; /* Adjust for spacing */
+  transform: translateY(-50%); /* Center the div */
+  border-radius: 50%;
+  width: 45px; /* Set width of the circle */
+  height: 45px; /* Set height of the circle */
+  background-color: rgb(190, 195, 190); /* Set background color to green */
+  display: flex; /* Use flex to center the button */
+  align-items: center; /* Center the button vertically */
+  justify-content: center; /* Center the button horizontally */
+}
+.header{
+  display: flex;
+  margin-left: 49px;
+}
+.recomended{
+  margin-right: 880px;
+}
+.movie-container {
+
+  overflow: hidden; /* Hide overflow to keep only the visible items */
+}
+
+.movie-image{
+  /* margin-left: 10px; */
+  width: 220px;
+  gap: 20px;
+  margin-right: 10px;
+  height:390px;
+  border-radius: 10px;
+  /* margin-right:10px; */
+}
+.movie-container {
+  position: relative; /* Ensure positioning context for absolute buttons */
+}
+.movie-genre{
+  color: #90938d;
+}
+
+.button1class, .button2clas {
+  position: absolute; /* Position them absolutely */
+  top: 40%; /* Move both buttons upward (adjust as needed) */
+  transform: translateY(-50%); /* Center vertically */
+  border-radius: 50%;
+  width: 45px; /* Set width of the circle */
+  height: 45px; /* Set height of the circle */
+  background-color: rgb(196, 207, 196); /* Cement color */
+  display: flex; /* Use flex to center the button */
+  align-items: center; /* Center the button vertically */
+  justify-content: center; /* Center the button horizontally */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor */
+  color: white;
+}.entiremenent {
+  margin-top: 60px;
+  padding: -50px;
+width: 100%; 
+ height: auto; /* Maintain aspect ratio */
+  margin-right: 110px; /* Use smaller margin for spacing */
+}
+.events{
+  /* padding: 10px; */
+  margin-right: 20px;
+  color: rgb(204, 47, 47);
+  width: 222px;
+  height: 222px;
+  border-radius: 15px;
+}
+.eventsmain{
+  margin-right: 100px;
+}
+.lastevents {
+  /* padding: 10px; */
+  margin-right: 100px;
+  color: rgb(204, 47, 47);
+  width: 222px;
+  height: 222px;
+  border-radius: 15px;
+}
+.classevent{
+  margin-right: 100px;
+}
+.eventsheading{
+  font-size: 28px;
+  color: #504c4d;
+  margin-left: 6px;
+  margin-right: 90px;
+}
+.premierediv{
+  margin-top: 70px;
+  width: 100%;
+  height: 750px;
+ background-color: rgb(43, 49, 72);
+}
+.image-label{
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+}
+.premieremainimg{
+  margin-top: 15px;
+margin-left: 140px;
+cursor: pointer;
+}
+.carousel-container {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.scroolpremiere {
+  display: flex;
+  gap: 15px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 250px; /* Make images larger */
+  height: 190x;
+  border-radius: 8px;
+}
+
+.nav-button1,.nav-button2{
+  margin-right: 10PX;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-button1{
+  position: absolute;
+  margin-right: 1320px;
+}
+.nav-button2{
+  position: absolute;
+  margin-left:1320px ;
+}
+.text1,.text2{
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  margin-left: 130px;
+}
+.text11{
+  color: black;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 30px;
+}
+.text1{
+  font-size: 30px;
+}
+.text2{
+  margin-top: -13px;
+  font-size: 15px;
+}
+.mainclas{
+width: 1000px;height: 200px; 
+}
+.button1class {
+  margin-left: 10px; /* Position left button */
+}
+
+.image-label {
+  color: white;
+  top: 40%; /* Adjust this to move the button upward */
+}
+
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add transition for smooth size change */
+}
+
+.dot.active {
+  background-color: white;
+  height: 10px; /* Increase size for active dot */
+  width: 10px; /* Increase size for active dot */
+}
+
+
+/* 
+.speacialclass {
+  display: flex;
+} */
+
+.imgg1 {
+  width: 500px;
+}
+.down{
+  font-size: 100px;
+  background-color: rgb(49, 48, 53); 
+   height: 400px;
+  width: 100%;
+}
+.imageshow{
+  width: 100px;
+  height: 100px;
+}
+.show{
+  display: flex;
+  margin-top: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.firstline{
+  margin-right: 10px;
+  margin-top: 14px;
+  width: 47%;
+  height: 1px;
+  border-radius: 1px;
+  background-color: rgb(255, 255, 255);
+}
+.firstline1{
+  margin-top: 14px;
+  border-radius: 1px;
+
+  margin-left: 15px;
+  width: 47%;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+}
+.imageshow{
+  margin-bottom: 200px;
+  width: 180px;
+  height: 55px;
+  border: 0;
+  border-radius: 0;
+  border-color: #504c4d;
+}
+.imagess{
+  margin-top: -250px;
+  margin-left: 610px;
+}
+.logoo{
+  margin-right: 10px;
+  margin-top: -500px;
+  width: 40px;
+  height: 40px;
+  
+}
+
+.imagess .logoo {
+  width: 40px; /* Adjust as needed */
+  height: 40px;
+  transition: filter 0.3s ease; /* Smooth transition */
+}
+
+.imagess .logoo:hover {
+  filter: brightness(0) invert(1); /* Makes the image appear white */
+}
+.mainfooter{
+  color: white;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-left: 520px;
+}
+.finall{
+  margin-top: 10px;
+  margin-left: 100px;
+  color: white;
+  font-size: 10px;
+}
